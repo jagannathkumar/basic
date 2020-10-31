@@ -14,7 +14,7 @@ public class App {
 		
 		for(int i=0;i<10;i++) {
 			UserDetails user = new UserDetails();
-			user.setName("User"+i);
+			user.setName("User"+i);//
 			session.save(user);
 		}
 		UserDetails user= session.get(UserDetails.class, 6);
