@@ -1,0 +1,12 @@
+com\myproject\dao\MovieDao.class
+com\myproject\entity\RunningShows.class
+com\myproject\controller\MovieController.class
+com\myproject\entity\Language.class
+com\myproject\entity\Location.class
+com\myproject\dao\daoimpl\MovieDaoImpl.class
+com\myproject\service\impl\MovieServiceImpl.class
+com\myproject\entity\Theatre.class
+com\myproject\service\MovieService.class
+com\myproject\utils\HibernateUtils.class
+com\myproject\entity\Booking.class
+com\myproject\entity\Movies.class

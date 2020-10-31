@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>SearchServiceImpl.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TicketsHere Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.mindtree.ticketshere.service.impl</a> &gt; <span class="el_source">SearchServiceImpl.java</span></div><h1>SearchServiceImpl.java</h1><pre class="source lang-java linenums">package com.mindtree.ticketshere.service.impl;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mindtree.ticketshere.dao.SearchDao;
+import com.mindtree.ticketshere.entity.EventDetails;
+import com.mindtree.ticketshere.entity.VenueDetails;
+import com.mindtree.ticketshere.service.SearchService;
+
+@Service
+@Transactional
+<span class="fc" id="L21">public class SearchServiceImpl implements SearchService {</span>
+	
+	@Autowired
+	SearchDao searchDao;
+	
+	public List&lt;EventDetails&gt; getAllEvents()
+	{
+<span class="fc" id="L28">		return searchDao.getAllEvents();</span>
+	}
+	
+	public List&lt;EventDetails&gt; getParticularEvent(String eventTitle)
+	{
+<span class="fc" id="L33">		List&lt;EventDetails&gt; finalEventList = new ArrayList&lt;&gt;();</span>
+		
+<span class="fc" id="L35">		List&lt;EventDetails&gt; allEvents = searchDao.getAllEvents();</span>
+		
+<span class="fc" id="L37">		List&lt;VenueDetails&gt; allVenues = searchDao.getAllVenue();</span>
+		
+<span class="fc" id="L39">		int flag=0;</span>
+<span class="fc" id="L40">		Set&lt;String&gt; allEventSet=new HashSet&lt;String&gt;();</span>
+<span class="fc" id="L41">		Set&lt;String&gt; allVenueSet=new HashSet&lt;String&gt;();</span>
+<span class="fc" id="L42">		Iterator itr=allEvents.iterator();</span>
+		
+		//adding all event in set
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		while(itr.hasNext())</span>
+		{
+<span class="fc" id="L47">			EventDetails ev=(EventDetails) itr.next();</span>
+<span class="fc" id="L48">			allEventSet.add(ev.getEventType());</span>
+<span class="fc" id="L49">		}</span>
+	
+<span class="fc" id="L51">		itr=allVenues.iterator();</span>
+		
+		//adding all venue in set
+<span class="fc bfc" id="L54" title="All 2 branches covered.">		while(itr.hasNext())</span>
+		{
+<span class="fc" id="L56">			VenueDetails venue=(VenueDetails) itr.next();</span>
+<span class="fc" id="L57">			allVenueSet.add(venue.getVenueName());</span>
+<span class="fc" id="L58">		}</span>
+		
+		
+<span class="fc" id="L61">		itr=allEventSet.iterator();</span>
+		
+<span class="fc bfc" id="L63" title="All 2 branches covered.">		while(itr.hasNext())</span>
+		{
+<span class="fc bfc" id="L65" title="All 2 branches covered.">			if(eventTitle.equalsIgnoreCase((String) itr.next()))</span>
+			{
+<span class="fc" id="L67">				flag=1;</span>
+<span class="fc" id="L68">				break;</span>
+			}
+		}
+		
+<span class="fc bfc" id="L72" title="All 2 branches covered.">		if(flag!=1)</span>
+		{
+<span class="fc" id="L74">			itr=allVenueSet.iterator();</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">			while(itr.hasNext())</span>
+			{
+<span class="fc bfc" id="L77" title="All 2 branches covered.">				if(eventTitle.equalsIgnoreCase((String) itr.next()))</span>
+				{
+<span class="fc" id="L79">					flag=2;</span>
+<span class="fc" id="L80">					break;</span>
+				}
+			}
+		}
+			
+<span class="fc" id="L85">		System.out.println(&quot;flag&quot;+ flag);</span>
+<span class="fc bfc" id="L86" title="All 2 branches covered.">		if(flag==1)</span>
+		{
+<span class="fc" id="L88">			finalEventList=searchDao.getEventsByType(eventTitle);</span>
+		}
+<span class="fc bfc" id="L90" title="All 2 branches covered.">		else if(flag==2)</span>
+		{
+<span class="fc" id="L92">			finalEventList=searchDao.getEventByVenue(eventTitle);</span>
+		}
+		else {
+			
+<span class="fc" id="L96">			Iterator it = allEvents.iterator();</span>
+			String check;
+<span class="fc bfc" id="L98" title="All 2 branches covered.">			while (it.hasNext()) {</span>
+<span class="fc" id="L99">				EventDetails event = (EventDetails) it.next();</span>
+<span class="fc" id="L100">				check = event.getEventName();</span>
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">				if (check.toLowerCase().contains(eventTitle.toLowerCase()))</span>
+<span class="fc" id="L102">					finalEventList.add(event);</span>
+<span class="fc" id="L103">			}</span>
+		}
+<span class="fc" id="L105">		return finalEventList;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

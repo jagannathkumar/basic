@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>VenueDetails.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TicketsHere Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.mindtree.ticketshere.entity</a> &gt; <span class="el_source">VenueDetails.java</span></div><h1>VenueDetails.java</h1><pre class="source lang-java linenums">package com.mindtree.ticketshere.entity;
+
+
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+
+@Entity
+public class VenueDetails {
+
+	@Id
+	private int venueId;
+	private String venueName;
+	private String venueTiming;
+	private String venueSeat;
+	private String venueBanner;
+	private String venueReviews;
+	private String venueLanguage;
+	
+
+	public String getVenueLanguage() {
+<span class="nc" id="L25">		return venueLanguage;</span>
+	}
+
+	public void setVenueLanguage(String venueLanguage) {
+<span class="fc" id="L29">		this.venueLanguage = venueLanguage;</span>
+<span class="fc" id="L30">	}</span>
+
+	public String getVenueName() {
+<span class="fc" id="L33">		return venueName;</span>
+	}
+
+	public void setVenueName(String venueName) {
+<span class="fc" id="L37">		this.venueName = venueName;</span>
+<span class="fc" id="L38">	}</span>
+
+	public String getVenueTiming() {
+<span class="nc" id="L41">		return venueTiming;</span>
+	}
+
+	public void setVenueTiming(String venueTiming) {
+<span class="fc" id="L45">		this.venueTiming = venueTiming;</span>
+<span class="fc" id="L46">	}</span>
+
+	public String getVenueSeat() {
+<span class="nc" id="L49">		return venueSeat;</span>
+	}
+
+	public void setVenueSeat(String venueSeat) {
+<span class="fc" id="L53">		this.venueSeat = venueSeat;</span>
+<span class="fc" id="L54">	}</span>
+
+	public String getVenueBanner() {
+<span class="nc" id="L57">		return venueBanner;</span>
+	}
+
+	public void setVenueBanner(String venueBanner) {
+<span class="fc" id="L61">		this.venueBanner = venueBanner;</span>
+<span class="fc" id="L62">	}</span>
+
+	public String getVenueReviews() {
+<span class="nc" id="L65">		return venueReviews;</span>
+	}
+
+	public void setVenueReviews(String venueReviews) {
+<span class="fc" id="L69">		this.venueReviews = venueReviews;</span>
+<span class="fc" id="L70">	}</span>
+
+	public int getVenueId() {
+<span class="nc" id="L73">		return venueId;</span>
+	}
+
+	public void setVenueId(int venueId) {
+<span class="fc" id="L77">		this.venueId = venueId;</span>
+<span class="fc" id="L78">	}</span>
+
+	public VenueDetails(int venueId, String venueName, String venueTiming, String venueSeat, String venueBanner,
+			String venueReviews, String venueLanguage) {
+<span class="nc" id="L82">		super();</span>
+<span class="nc" id="L83">		this.venueId = venueId;</span>
+<span class="nc" id="L84">		this.venueName = venueName;</span>
+<span class="nc" id="L85">		this.venueTiming = venueTiming;</span>
+<span class="nc" id="L86">		this.venueSeat = venueSeat;</span>
+<span class="nc" id="L87">		this.venueBanner = venueBanner;</span>
+<span class="nc" id="L88">		this.venueReviews = venueReviews;</span>
+<span class="nc" id="L89">		this.venueLanguage = venueLanguage;</span>
+<span class="nc" id="L90">	}</span>
+
+	public VenueDetails() {
+<span class="fc" id="L93">		super();</span>
+<span class="fc" id="L94">	}</span>
+
+	@Override
+	public String toString() {
+<span class="nc" id="L98">		return &quot;VenueDetails [venueId=&quot; + venueId + &quot;, venueName=&quot; + venueName + &quot;, venueTiming=&quot; + venueTiming</span>
+				+ &quot;, venueSeat=&quot; + venueSeat + &quot;, venueBanner=&quot; + venueBanner + &quot;, venueReviews=&quot; + venueReviews
+				+ &quot;, venueLanguage=&quot; + venueLanguage + &quot;]&quot;;
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

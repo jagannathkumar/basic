@@ -1,0 +1,369 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>58/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jul 12 18:00:29 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>7 seconds (7287 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.EventServiceTest.displayTesting()'><b>displayTesting</b><br>Test class: com.mindtree.ticketshere.service.EventServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.EventServiceTest@5503de1</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.EventServiceTest.displayengTesting()'><b>displayengTesting</b><br>Test class: com.mindtree.ticketshere.service.EventServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.EventServiceTest@5503de1</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.EventServiceTest.displayhinTesting()'><b>displayhinTesting</b><br>Test class: com.mindtree.ticketshere.service.EventServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.EventServiceTest@5503de1</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.EventServiceTest.displaytelTesting()'><b>displaytelTesting</b><br>Test class: com.mindtree.ticketshere.service.EventServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.EventServiceTest@5503de1</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.SearchDaoTest.getAllEventTest()'><b>getAllEventTest</b><br>Test class: com.mindtree.ticketshere.Dao.SearchDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.SearchDaoTest@41d16cc3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.SearchServiceTest.getAllEventTest()'><b>getAllEventTest</b><br>Test class: com.mindtree.ticketshere.service.SearchServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.SearchServiceTest@54e43bfe</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.SearchDaoTest.getAllVenueTest()'><b>getAllVenueTest</b><br>Test class: com.mindtree.ticketshere.Dao.SearchDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.SearchDaoTest@41d16cc3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.SearchDaoTest.getEventByTypeTest()'><b>getEventByTypeTest</b><br>Test class: com.mindtree.ticketshere.Dao.SearchDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.SearchDaoTest@41d16cc3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.SearchDaoTest.getEventByVenueTest()'><b>getEventByVenueTest</b><br>Test class: com.mindtree.ticketshere.Dao.SearchDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.SearchDaoTest@41d16cc3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.TicketsHereDaoImplTest.getEventTest()'><b>getEventTest</b><br>Test class: com.mindtree.ticketshere.Dao.TicketsHereDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.TicketsHereDaoImplTest@bf75b5c</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.SearchServiceTest.getParticularEventTest()'><b>getParticularEventTest</b><br>Test class: com.mindtree.ticketshere.service.SearchServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.SearchServiceTest@54e43bfe</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.TicketsHereDaoImplTest.getSpecificEventTest()'><b>getSpecificEventTest</b><br>Test class: com.mindtree.ticketshere.Dao.TicketsHereDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.TicketsHereDaoImplTest@bf75b5c</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.TicketsHereControllerTest.getSpecificEventTesting()'><b>getSpecificEventTesting</b><br>Test class: com.mindtree.ticketshere.controller.TicketsHereControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.TicketsHereControllerTest@3290b1a6</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.TicketsHereServiceImplTest.getSpecificEventTesting()'><b>getSpecificEventTesting</b><br>Test class: com.mindtree.ticketshere.service.TicketsHereServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.TicketsHereServiceImplTest@ab24484</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.FilterControllerTest.getenglishTesting()'><b>getenglishTesting</b><br>Test class: com.mindtree.ticketshere.controller.FilterControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.FilterControllerTest@483b0690</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.FilterControllerTest.gethindiTesting()'><b>gethindiTesting</b><br>Test class: com.mindtree.ticketshere.controller.FilterControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.FilterControllerTest@483b0690</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.FilterControllerTest.getlanguageTesting()'><b>getlanguageTesting</b><br>Test class: com.mindtree.ticketshere.controller.FilterControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.FilterControllerTest@483b0690</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.FilterControllerTest.getteluguTesting()'><b>getteluguTesting</b><br>Test class: com.mindtree.ticketshere.controller.FilterControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.FilterControllerTest@483b0690</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.ForgotPasswordServiceTest.isPresentFalse()'><b>isPresentFalse</b><br>Test class: com.mindtree.ticketshere.service.ForgotPasswordServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.ForgotPasswordServiceTest@60ed12e8</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.LoginSignUpDaoTest.isPresentOrganizerTest()'><b>isPresentOrganizerTest</b><br>Test class: com.mindtree.ticketshere.Dao.LoginSignUpDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.LoginSignUpDaoTest@32faa16c</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isPresentOrganizerTestFalse()'><b>isPresentOrganizerTestFalse</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isPresentOrganizerTestTrue()'><b>isPresentOrganizerTestTrue</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.LoginSignUpDaoTest.isPresentTest()'><b>isPresentTest</b><br>Test class: com.mindtree.ticketshere.Dao.LoginSignUpDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.LoginSignUpDaoTest@32faa16c</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.ForgotPasswordServiceTest.isPresentTrue()'><b>isPresentTrue</b><br>Test class: com.mindtree.ticketshere.service.ForgotPasswordServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.ForgotPasswordServiceTest@60ed12e8</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isPresentUserTestFalse()'><b>isPresentUserTestFalse</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isPresentUserTestTrue()'><b>isPresentUserTestTrue</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.LoginSignUpDaoTest.isValidOrgainizerTest()'><b>isValidOrgainizerTest</b><br>Test class: com.mindtree.ticketshere.Dao.LoginSignUpDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.LoginSignUpDaoTest@32faa16c</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isValidOrganizerTestFalse()'><b>isValidOrganizerTestFalse</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isValidOrganizerTestTrue()'><b>isValidOrganizerTestTrue</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.LoginSignUpDaoTest.isValidTest()'><b>isValidTest</b><br>Test class: com.mindtree.ticketshere.Dao.LoginSignUpDaoTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.LoginSignUpDaoTest@32faa16c</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isValidUserTestFalse()'><b>isValidUserTestFalse</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.LoginSignupServiceTest.isValidUserTestTrue()'><b>isValidUserTestTrue</b><br>Test class: com.mindtree.ticketshere.service.LoginSignupServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.LoginSignupServiceTest@5a13fcf3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.SearchControllerTest.searchTest()'><b>searchTest</b><br>Test class: com.mindtree.ticketshere.controller.SearchControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.SearchControllerTest@649f25f3</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.EventDaoImplTest.showTest()'><b>showTest</b><br>Test class: com.mindtree.ticketshere.Dao.EventDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.EventDaoImplTest@4816ee24</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.EventDaoImplTest.showengTest()'><b>showengTest</b><br>Test class: com.mindtree.ticketshere.Dao.EventDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.EventDaoImplTest@4816ee24</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.EventDaoImplTest.showhinTest()'><b>showhinTest</b><br>Test class: com.mindtree.ticketshere.Dao.EventDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.EventDaoImplTest@4816ee24</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.Dao.EventDaoImplTest.showtelTest()'><b>showtelTest</b><br>Test class: com.mindtree.ticketshere.Dao.EventDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.Dao.EventDaoImplTest@4816ee24</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.FeedbackControllerTest.test()'><b>test</b><br>Test class: com.mindtree.ticketshere.controller.FeedbackControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.FeedbackControllerTest@2e62ead7</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.ForgotPasswordControllerTest.test()'><b>test</b><br>Test class: com.mindtree.ticketshere.controller.ForgotPasswordControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.ForgotPasswordControllerTest@24c8d8be</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.ForgotPasswordControllerTest.test1()'><b>test1</b><br>Test class: com.mindtree.ticketshere.controller.ForgotPasswordControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.ForgotPasswordControllerTest@24c8d8be</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.ForgotPasswordControllerTest.test2()'><b>test2</b><br>Test class: com.mindtree.ticketshere.controller.ForgotPasswordControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.ForgotPasswordControllerTest@24c8d8be</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.ForgotPasswordControllerTest.test3()'><b>test3</b><br>Test class: com.mindtree.ticketshere.controller.ForgotPasswordControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.ForgotPasswordControllerTest@24c8d8be</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.LoginSignupControllerTest.testInValidSignupOrganiser()'><b>testInValidSignupOrganiser</b><br>Test class: com.mindtree.ticketshere.controller.LoginSignupControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.LoginSignupControllerTest@3b98b809</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.LoginSignupControllerTest.testInvalidLogin()'><b>testInvalidLogin</b><br>Test class: com.mindtree.ticketshere.controller.LoginSignupControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.LoginSignupControllerTest@3b98b809</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.LoginSignupControllerTest.testInvalidLoginOrganizer()'><b>testInvalidLoginOrganizer</b><br>Test class: com.mindtree.ticketshere.controller.LoginSignupControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.LoginSignupControllerTest@3b98b809</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.LoginSignupControllerTest.testInvalidLoginOrganizer2()'><b>testInvalidLoginOrganizer2</b><br>Test class: com.mindtree.ticketshere.controller.LoginSignupControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.LoginSignupControllerTest@3b98b809</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.CancelBookingControllerTest.testValidGetBookingId()'><b>testValidGetBookingId</b><br>Test class: com.mindtree.ticketshere.controller.CancelBookingControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.CancelBookingControllerTest@67bf0480</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.LoginSignupControllerTest.testValidSignup()'><b>testValidSignup</b><br>Test class: com.mindtree.ticketshere.controller.LoginSignupControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.LoginSignupControllerTest@3b98b809</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.LoginSignupControllerTest.testValidSignupOrganiser()'><b>testValidSignupOrganiser</b><br>Test class: com.mindtree.ticketshere.controller.LoginSignupControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.LoginSignupControllerTest@3b98b809</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.CancelBookingControllerTest.testValidisPresent()'><b>testValidisPresent</b><br>Test class: com.mindtree.ticketshere.controller.CancelBookingControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.CancelBookingControllerTest@67bf0480</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.LoginSignupControllerTest.testinValidSignup()'><b>testinValidSignup</b><br>Test class: com.mindtree.ticketshere.controller.LoginSignupControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.LoginSignupControllerTest@3b98b809</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.CancelBookingControllerTest.testinValidisPresent()'><b>testinValidisPresent</b><br>Test class: com.mindtree.ticketshere.controller.CancelBookingControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.CancelBookingControllerTest@67bf0480</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.TicketsHereControllerTest.ticketsHereTesting()'><b>ticketsHereTesting</b><br>Test class: com.mindtree.ticketshere.controller.TicketsHereControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.TicketsHereControllerTest@3290b1a6</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.TicketsHereServiceImplTest.ticketsHereTesting()'><b>ticketsHereTesting</b><br>Test class: com.mindtree.ticketshere.service.TicketsHereServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.TicketsHereServiceImplTest@ab24484</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.ForgotPasswordServiceTest.updatePasswordTest()'><b>updatePasswordTest</b><br>Test class: com.mindtree.ticketshere.service.ForgotPasswordServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.ForgotPasswordServiceTest@60ed12e8</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.controller.TicketsHereControllerTest.updateTicketTesting()'><b>updateTicketTesting</b><br>Test class: com.mindtree.ticketshere.controller.TicketsHereControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.controller.TicketsHereControllerTest@3290b1a6</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.TicketsHereServiceImplTest.updateTicketTesting()'><b>updateTicketTesting</b><br>Test class: com.mindtree.ticketshere.service.TicketsHereServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.TicketsHereServiceImplTest@ab24484</td></tr>
+<tr>
+<td title='com.mindtree.ticketshere.service.ForgotPasswordServiceTest.verifyOtpTestInvalid()'><b>verifyOtpTestInvalid</b><br>Test class: com.mindtree.ticketshere.service.ForgotPasswordServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.mindtree.ticketshere.service.ForgotPasswordServiceTest@60ed12e8</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dto,OtpAndEmail,0,17,0,0,0,7,0,5,0,5
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,TicketsHereServiceImpl.new Authenticator() {...},12,0,0,0,2,0,2,0,2,0
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,ForgotPasswordService,146,31,7,1,36,7,5,4,1,4
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,EventServiceImpl,0,19,0,0,0,5,0,5,0,5
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,ForgotPasswordService.new Authenticator() {...},12,0,0,0,2,0,2,0,2,0
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,LoginSignupService,10,23,0,0,4,5,2,5,2,5
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,CancelBookingServiceImpl,18,0,0,0,4,0,4,0,4,0
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,SearchServiceImpl,0,148,1,21,0,42,1,13,0,3
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,FeedbackServiceImpl,8,0,0,0,2,0,2,0,2,0
+TicketsHere Maven Webapp,com.mindtree.ticketshere.service.impl,TicketsHereServiceImpl,90,18,0,0,24,4,2,4,2,4
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dao.impl,DaoLoginSignUp,92,101,16,4,23,29,12,6,2,6
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dao.impl,CancelBookingDaoImpl,110,3,4,0,27,1,5,1,3,1
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dao.impl,TicketsHereDaoImpl,105,39,2,0,24,11,4,4,3,4
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dao.impl,FeedbackDaoImpl,10,3,0,0,3,1,1,1,1,1
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dao.impl,EventDaoImpl,0,72,0,0,0,21,0,6,0,6
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dao.impl,SearchDaoImpl,0,75,0,0,0,19,0,6,0,6
+TicketsHere Maven Webapp,com.mindtree.ticketshere.dao.impl,ForgotPasswordDaoImpl,117,3,4,0,32,1,6,1,4,1
+TicketsHere Maven Webapp,com.mindtree.ticketshere.controller,FeedbackController,9,3,0,0,1,1,1,1,1,1
+TicketsHere Maven Webapp,com.mindtree.ticketshere.controller,FilterController,0,19,0,0,0,5,0,5,0,5
+TicketsHere Maven Webapp,com.mindtree.ticketshere.controller,LoginSignupController,12,103,2,6,2,19,2,7,0,5
+TicketsHere Maven Webapp,com.mindtree.ticketshere.controller,ForgotPasswordController,31,12,2,0,5,2,3,2,2,2
+TicketsHere Maven Webapp,com.mindtree.ticketshere.controller,SearchController,0,16,0,0,0,4,0,4,0,4
+TicketsHere Maven Webapp,com.mindtree.ticketshere.controller,TicketsHereController,5,22,0,0,1,5,1,4,1,4
+TicketsHere Maven Webapp,com.mindtree.ticketshere.controller,CancelBookingController,9,25,1,1,1,5,1,3,0,3
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,Feedback,16,15,0,0,6,7,5,4,5,4
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,VenueDetails,84,34,0,0,16,17,8,9,8,9
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,TimingsSlot,45,0,0,0,20,0,13,0,13,0
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,Events,95,35,0,0,15,18,13,9,13,9
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,Ticket,66,7,0,0,28,3,19,2,19,2
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,User,74,44,0,0,9,20,8,12,8,12
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,EventDetails,28,45,0,0,10,22,9,12,9,12
+TicketsHere Maven Webapp,com.mindtree.ticketshere.entity,Organizer,26,33,0,0,10,16,8,9,8,9
+TicketsHere Maven Webapp,com.mindtree.ticketshere.configuration,WebInitializer,20,0,0,0,4,0,4,0,4,0
+TicketsHere Maven Webapp,com.mindtree.ticketshere.configuration,HibernateConfiguration,102,0,0,0,21,0,5,0,5,0
+TicketsHere Maven Webapp,com.mindtree.ticketshere.configuration,AppConfig,18,0,0,0,6,0,2,0,2,0

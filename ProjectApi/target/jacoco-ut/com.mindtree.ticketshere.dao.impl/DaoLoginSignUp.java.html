@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>DaoLoginSignUp.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TicketsHere Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.mindtree.ticketshere.dao.impl</a> &gt; <span class="el_source">DaoLoginSignUp.java</span></div><h1>DaoLoginSignUp.java</h1><pre class="source lang-java linenums">package com.mindtree.ticketshere.dao.impl;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.mindtree.ticketshere.dao.DaoLoginSignup;
+import com.mindtree.ticketshere.entity.Organizer;
+import com.mindtree.ticketshere.entity.User;
+
+@Repository
+<span class="fc" id="L17">public class DaoLoginSignUp implements DaoLoginSignup {</span>
+	@Autowired
+	SessionFactory sessionFactory;
+	
+<span class="fc" id="L21">	String failureflag=&quot;failure&quot;;</span>
+<span class="fc" id="L22">	String sucessflag=&quot;sucess&quot;;</span>
+
+	public void setSessionFactory(SessionFactory sessionFactory)
+	{
+<span class="fc" id="L26">		this.sessionFactory=sessionFactory;</span>
+<span class="fc" id="L27">	}</span>
+	public void insert(User user) { // inserting into db details of user.
+<span class="nc" id="L29">		Session session = sessionFactory.getCurrentSession();</span>
+<span class="nc" id="L30">		session.save(user);</span>
+<span class="nc" id="L31">	}</span>
+
+	public boolean isPresent(User user) { // checking if a user is already present
+<span class="fc" id="L34">		boolean isValid = false;</span>
+<span class="fc" id="L35">		Session session = sessionFactory.getCurrentSession();</span>
+<span class="fc" id="L36">		Query query = session.createQuery(&quot;from User&quot;);</span>
+		@SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L38">		List&lt;User&gt; userlist = query.getResultList();</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">		for (User use : userlist) {</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">			if (use.getEmail().equalsIgnoreCase(user.getEmail())) {</span>
+<span class="nc" id="L41">				isValid = true;</span>
+<span class="nc" id="L42">				break;</span>
+			}
+
+<span class="nc" id="L45">		}</span>
+<span class="fc" id="L46">		return isValid;</span>
+
+	}
+
+	public User isValid(User user) { // checking if a user's credentials are valid
+<span class="fc" id="L51">		Session session = sessionFactory.getCurrentSession();</span>
+<span class="fc" id="L52">		Query query = session.createQuery(&quot;from User&quot;);</span>
+		@SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L54">		List&lt;User&gt; userlist = query.getResultList();</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">		for (User use : userlist) {</span>
+<span class="nc bnc" id="L56" title="All 4 branches missed.">			if (use.getEmail().equalsIgnoreCase(user.getEmail()) &amp;&amp; use.getPassword().equals(user.getPassword())) {</span>
+<span class="nc" id="L57">				use.setFlag(sucessflag);</span>
+<span class="nc" id="L58">				return use;</span>
+			}
+
+<span class="nc" id="L61">		}</span>
+<span class="fc" id="L62">		user.setFlag(failureflag);</span>
+<span class="fc" id="L63">		return user;</span>
+	}
+
+	public void insertOrganizer(Organizer organizer) { // inserting into db details of Organizer.
+<span class="nc" id="L67">		Session session = sessionFactory.getCurrentSession();</span>
+<span class="nc" id="L68">		session.save(organizer);</span>
+<span class="nc" id="L69">	}</span>
+
+	public boolean isPresentOrganizer(Organizer organizer) { // checking if a organizer is already present in the db
+<span class="fc" id="L72">		boolean isValid = false;</span>
+<span class="fc" id="L73">		Session session = sessionFactory.getCurrentSession();</span>
+<span class="fc" id="L74">		Query query = session.createQuery(&quot;from Organizer&quot;);</span>
+		@SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L76">		List&lt;Organizer&gt; organizerList = query.getResultList();</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">		for (Organizer organizerVariable : organizerList) {</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">			if (organizerVariable.getEmail().equalsIgnoreCase(organizer.getEmail())) {</span>
+<span class="nc" id="L79">				isValid = true;</span>
+<span class="nc" id="L80">				break;</span>
+			}
+
+<span class="nc" id="L83">		}</span>
+<span class="fc" id="L84">		return isValid;</span>
+
+	}
+
+	public Organizer isValidOrgainizer(Organizer organizer) { // checking if a organizer's credentials are valid
+<span class="fc" id="L89">		Session session = sessionFactory.getCurrentSession();</span>
+<span class="fc" id="L90">		Query query = session.createQuery(&quot;from Organizer&quot;);</span>
+		@SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L92">		List&lt;Organizer&gt; organizerList = query.getResultList();</span>
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">		for (Organizer organizerVariable : organizerList) {</span>
+<span class="nc bnc" id="L94" title="All 2 branches missed.">			if (organizerVariable.getEmail().equalsIgnoreCase(organizer.getEmail())</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">					&amp;&amp; organizerVariable.getPassword().equals(organizer.getPassword())) {</span>
+<span class="nc" id="L96">				organizerVariable.setFlag(sucessflag);</span>
+<span class="nc" id="L97">				return organizerVariable;</span>
+			}
+
+<span class="nc" id="L100">		}</span>
+<span class="fc" id="L101">		organizer.setFlag(failureflag);</span>
+<span class="fc" id="L102">		return organizer;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
