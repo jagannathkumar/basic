@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.myproject.dao.MovieDao;
+import com.myproject.dto.UserDetails;
 import com.myproject.entity.Booking;
 import com.myproject.entity.Language;
 import com.myproject.entity.Location;
@@ -31,6 +32,9 @@ public class MovieServiceImpl implements MovieService{
 		// TODO Auto-generated method stub
 		return movieDao.getLanguage();
 	}
+	public Language getLanguage(int id) {
+		return movieDao.getLanguage(id);
+	}
 	@Override
 	public List<RunningShows> getRunningShows() {
 		return movieDao.getRunningShows();
@@ -42,6 +46,10 @@ public class MovieServiceImpl implements MovieService{
 	@Override
 	public List<Location> getLocation() {
 		return movieDao.getLocation();
+	}
+	@Override
+	public UserDetails getUserDetails(int userId) {
+		return movieDao.getUserDetails(userId);
 	}
 
 }

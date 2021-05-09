@@ -31,11 +31,16 @@ public class App
         session.save(vehicle);
         session.save(vehicle1);
         session.save(user);
+        
+        
 		/*
 		 * session.save(movie); session.save(language); session.save(location);
 		 * session.save(theatre); session.save(runningshows);
 		 */
         session.getTransaction().commit();
         session.close();
+        session =sessionFactory.openSession();
+        Vehicle vh= session.get(Vehicle.class, 1);
+        System.out.println(vh.getVehicleName()+" "+vh.getUserDetails().getUserName());
     }
 }

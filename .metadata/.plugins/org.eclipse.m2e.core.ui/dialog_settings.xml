@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\EclipseWorkspace\ProjectApi"/>
 			<item value="D:\EclipseWorkspace\ticketshere"/>
 			<item value="D:\EclipseWorkspace\UserVehiclesOneToOne"/>
 		</list>
@@ -31,6 +32,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -42,10 +44,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.myproject"/>
 		</list>
 		<list key="groupId">
+			<item value="com.myproject"/>
 		</list>
 		<list key="artifactId">
+			<item value="Hospital"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -61,12 +66,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.myproject"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="Crud"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

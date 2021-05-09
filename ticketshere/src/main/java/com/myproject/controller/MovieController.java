@@ -5,11 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.myproject.dto.UserDetails;
 import com.myproject.entity.Booking;
 import com.myproject.entity.Language;
 import com.myproject.entity.Location;
@@ -35,6 +38,11 @@ public class MovieController {
 		return movieService.getLanguage();
 	}
 	
+	@RequestMapping(value = "/getLanguage", method = RequestMethod.GET)
+	public Language getLanguage(@RequestParam String id){
+		return movieService.getLanguage(Integer.valueOf(id));
+	}
+	
 	@RequestMapping(value = "/getRunning", method = RequestMethod.GET)
 	public List<RunningShows> getRunningShows(){
 		return movieService.getRunningShows();
@@ -47,5 +55,9 @@ public class MovieController {
 	@RequestMapping(value="/getLoc", method=RequestMethod.GET)
 	public List<Location> getLocation() {
 		return movieService.getLocation();
+	}
+	@RequestMapping(value="/getUserDetails/{userId}", method=RequestMethod.GET)
+	public UserDetails getUserDetails(@PathVariable int userId) {
+		return movieService.getUserDetails(userId);
 	}
 }
