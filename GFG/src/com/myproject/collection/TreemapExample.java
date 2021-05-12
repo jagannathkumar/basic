@@ -53,8 +53,10 @@ public class TreemapExample {
 				list4.add(str);
 			}
 		}
-		System.out.println(list4);
+		System.out.println("After flattening using for loop: "+list4);
 		
+		List<String> list5=list3.stream().flatMap(li->li.stream()).collect(Collectors.toList());
+		System.out.println("After flattening using stream: "+list5);
 	}
 
 }
