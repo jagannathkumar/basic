@@ -22,6 +22,7 @@ public class MovieServiceImpl implements MovieService{
 	
 	@Autowired
 	MovieDao movieDao;
+	
 	@Override
 	public List<Movies> getMoviesList() {
 		// TODO Auto-generated method stub

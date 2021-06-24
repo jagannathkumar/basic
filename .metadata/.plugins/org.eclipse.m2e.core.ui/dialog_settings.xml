@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\EclipseWorkspace\springpractice"/>
+			<item value="D:\EclipseWorkspace\service-registry"/>
+			<item value="D:\EclipseWorkspace\user-service"/>
+			<item value="D:\EclipseWorkspace\department-service"/>
 			<item value="D:\EclipseWorkspace\ProjectApi"/>
 			<item value="D:\EclipseWorkspace\ticketshere"/>
 			<item value="D:\EclipseWorkspace\UserVehiclesOneToOne"/>

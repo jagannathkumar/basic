@@ -23,18 +23,6 @@ public class Testjvm {
         for (Field field : f) 
             System.out.println(field.getName());
         
-        
-        String s="ananya";
-    	String st="";
-    	//First non repeating characters
-    	for(int i=0;i<s.length();i++){
-    		st=(i==0?"":s.substring(0,i))+s.substring(i+1,s.length());
-    		//System.out.println(i+" "+st);
-    		if(!st.contains(String.valueOf(s.charAt(i)))){
-    		System.out.println("First non repeating characters in \""+s+"\": "+s.charAt(i));
-    		break;
-    		}
-    	}
     	List<String> l1 = new ArrayList<>();
     	List<String> l2 = new ArrayList<>();
     	l1.add("a");

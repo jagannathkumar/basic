@@ -7,7 +7,6 @@ import org.hibernate.cfg.Configuration;
 public class App {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -18,6 +17,7 @@ public class App {
 		 */
 
 		UserDetails user = session.get(UserDetails.class, 5);
+		//session.getTransaction().commit();
 		session.close();
 		Session session1 =sessionFactory.openSession();
 		UserDetails user1 = session1.get(UserDetails.class, 5);
@@ -26,7 +26,7 @@ public class App {
 		 * session.delete(user); session.saveOrUpdate(user);
 		 * session.getTransaction().commit();
 		 */
-		session1.close();
+		session1.close();		
 	}
 
 }
